@@ -34,6 +34,8 @@ public class Geese extends JPanel implements ActionListener, MouseMotionListener
         seconds = 30;
         timerLabel = new JLabel("" + seconds);
         timerLabel.setFont(new Font("Arial", Font.BOLD, 40));
+        Color c = new Color(179, 125, 84);
+        timerLabel.setForeground(c);
         timerLabel2 = new JLabel(" ");
 
         add(timerLabel);

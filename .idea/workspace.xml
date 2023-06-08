@@ -4,11 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="027e4598-a674-4829-a262-c0dbe4e1e06b" name="Changes" comment="- added a timer, and added a little button thing before the player start playing">
-      <change afterPath="$PROJECT_DIR$/src/clockBack.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/clockFront.png" afterDir="false" />
+    <list default="true" id="027e4598-a674-4829-a262-c0dbe4e1e06b" name="Changes" comment="animation added to the timer">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Geese.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Geese.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SimpleGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SimpleGUI.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -100,7 +99,14 @@
       <option name="project" value="LOCAL" />
       <updated>1686240814559</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="animation added to the timer">
+      <created>1686248846805</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1686248846805</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -118,6 +124,7 @@
     <MESSAGE value="- Another copy of Qu-wack a mole because the files of the original was messed up&#10;&#10;- added the people images and resetted the locations &#10;- THe homepage image was also changed" />
     <MESSAGE value="- changed the start buttons' images" />
     <MESSAGE value="- added a timer, and added a little button thing before the player start playing" />
-    <option name="LAST_COMMIT_MESSAGE" value="- added a timer, and added a little button thing before the player start playing" />
+    <MESSAGE value="animation added to the timer" />
+    <option name="LAST_COMMIT_MESSAGE" value="animation added to the timer" />
   </component>
 </project>

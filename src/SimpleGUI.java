@@ -21,6 +21,7 @@ public class SimpleGUI extends JFrame{
     }
 
     private void init() {
+        setLocation(350, 60);
         setTitle("Qu-wack a mole");
         setSize(615, 877);
         setDefaultCloseOperation(EXIT_ON_CLOSE);

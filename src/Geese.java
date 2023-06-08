@@ -24,7 +24,19 @@ public class Geese extends JPanel implements ActionListener, MouseMotionListener
     private JButton b8;
     private JButton b9;
 
+    private JButton pStart;
+    private Timer timer;
+    private int seconds;
+    private JLabel timerLabel;
+
     public Geese () {
+        timer = new Timer(1000, null);
+        seconds = 30;
+        timerLabel = new JLabel("" + seconds);
+
+        add(timerLabel);
+        pStart = new JButton("  ");
+        add(pStart);
         previous = 0;
         b4 = new JButton(""); //put out of order in order to fix overlapping
         add(b4);
@@ -55,9 +67,12 @@ public class Geese extends JPanel implements ActionListener, MouseMotionListener
         b7.addActionListener(this);
         b8.addActionListener(this);
         b9.addActionListener(this);
+        timer.addActionListener(this);
+        pStart.addActionListener(this);
         addMouseMotionListener(this);
 
-
+        pStart.setVisible(true);
+        timerLabel.setVisible(false);
         b1.setVisible(false);
         b2.setVisible(false);
         b3.setVisible(false);
@@ -67,7 +82,6 @@ public class Geese extends JPanel implements ActionListener, MouseMotionListener
         b7.setVisible(false);
         b8.setVisible(false);
         b9.setVisible(false);
-        randomGoose();
     }
 
     @Override
@@ -76,6 +90,21 @@ public class Geese extends JPanel implements ActionListener, MouseMotionListener
         ImageIcon icon0 = new ImageIcon("src/bg2.png");
         Image iconImg = icon0.getImage();
         g.drawImage(iconImg, 0, 0, null);
+
+        timerLabel.setLocation(550, 40);
+        pStart.setLocation(53,260);
+
+        ImageIcon icon11;
+        if (SimpleGUI.IsGeese()){
+            icon11 = new ImageIcon("src/geeseStart.png");
+        }else{
+            icon11 = new ImageIcon("src/peopleStart.png");
+        }
+        pStart.setIcon(icon11);
+        pStart.setBorderPainted(false);
+        pStart.setContentAreaFilled(false);
+        pStart.setFocusPainted(false);
+        pStart.setOpaque(false);
 
         b1.setLocation(10,290);
         b2.setLocation(210,290);
@@ -214,9 +243,11 @@ public class Geese extends JPanel implements ActionListener, MouseMotionListener
         b9.setFocusPainted(false);
         b9.setOpaque(false); //the rest of the icons 2-9
 
-        ImageIcon icon10 = new ImageIcon("src/hammer.png");
-        Image iconImg10 = icon10.getImage();
-        g.drawImage(iconImg10, x-30, y-57, null);
+        if (!(pStart.isVisible())) {
+            ImageIcon icon10 = new ImageIcon("src/hammer.png");
+            Image iconImg10 = icon10.getImage();
+            g.drawImage(iconImg10, x-30, y-57, null);
+        }
     }
 
     private void randomGoose() {
@@ -260,16 +291,33 @@ public class Geese extends JPanel implements ActionListener, MouseMotionListener
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        Object source = e.getSource();
-        JButton button = (JButton) source;
-        String text = button.getText();
 
-        if (text.equals("")) {
-            button.setVisible(false);
-            randomGoose();
+        Object source = e.getSource();
+        if (source instanceof Timer) {
+            timerFire();
+        } else if (source instanceof JButton) {
+            JButton button = (JButton) source;
+            String text = button.getText();
+            if (text.equals("")) {
+                button.setVisible(false);
+                randomGoose();
+            } else if (text.equals("  ")) { //pStart
+                pStart.setVisible(false);
+                timer.start();
+                timerLabel.setVisible(true);
+                randomGoose();
+            }
         }
     }
 
+    public void timerFire() {
+        seconds--;
+        timerLabel.setText(" " + seconds);
+
+        if (seconds == 0) {
+            timer.stop();
+        }
+    }
 
     @Override
     public void mouseDragged(MouseEvent e) {

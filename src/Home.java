@@ -15,12 +15,12 @@ public class Home extends JPanel implements ActionListener, MouseMotionListener 
     public Home () {
         previous = 0;
 
-        startWithGeese = new JButton("      .");
+        startWithGeese = new JButton(" ");
         add(startWithGeese);
         startWithGeese.setLocation(200,200);
         startWithGeese.addActionListener(this);
 
-        startWithPeople = new JButton("          People Start");
+        startWithPeople = new JButton("  ");
         add(startWithPeople);
         startWithPeople.addActionListener(this);
     }
@@ -55,12 +55,12 @@ public class Home extends JPanel implements ActionListener, MouseMotionListener 
         JButton button = (JButton) source;
         String text = button.getText();
 
-        if (text.equals("      .")){
+        if (text.equals(" ")){
             SimpleGUI.setIsGeese(true);
             SimpleGUI.cardLayout.show(SimpleGUI.mainPanel, "pane2");
         }
 
-        if (text.equals("          People Start")){
+        if (text.equals("  ")){
             SimpleGUI.setIsGeese(false);
             SimpleGUI.cardLayout.show(SimpleGUI.mainPanel, "pane2");
         }

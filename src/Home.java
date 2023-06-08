@@ -15,12 +15,12 @@ public class Home extends JPanel implements ActionListener, MouseMotionListener 
     public Home () {
         previous = 0;
 
-        startWithGeese = new JButton("Geese Start");
+        startWithGeese = new JButton("      .");
         add(startWithGeese);
         startWithGeese.setLocation(200,200);
         startWithGeese.addActionListener(this);
 
-        startWithPeople = new JButton("People Start");
+        startWithPeople = new JButton("          People Start");
         add(startWithPeople);
         startWithPeople.addActionListener(this);
     }
@@ -32,7 +32,19 @@ public class Home extends JPanel implements ActionListener, MouseMotionListener 
         Image iconImg = icon0.getImage();
         g.drawImage(iconImg, 0, 0, null);
 
-        startWithPeople.setLocation(270,400);
+        startWithPeople.setIcon(new ImageIcon("src/peopleButton.png"));
+        startWithPeople.setLocation(20,0);
+        startWithPeople.setBorderPainted(false);
+        startWithPeople.setContentAreaFilled(false);
+        startWithPeople.setFocusPainted(false);
+        startWithPeople.setOpaque(false);
+
+        startWithGeese.setIcon(new ImageIcon("src/geeseButton.png"));
+        startWithGeese.setLocation(300,0);
+        startWithGeese.setBorderPainted(false);
+        startWithGeese.setContentAreaFilled(false);
+        startWithGeese.setFocusPainted(false);
+        startWithGeese.setOpaque(false);
     }
 
 
@@ -43,12 +55,12 @@ public class Home extends JPanel implements ActionListener, MouseMotionListener 
         JButton button = (JButton) source;
         String text = button.getText();
 
-        if (text.equals("Geese Start")){
+        if (text.equals("      .")){
             SimpleGUI.setIsGeese(true);
             SimpleGUI.cardLayout.show(SimpleGUI.mainPanel, "pane2");
         }
 
-        if (text.equals("People Start")){
+        if (text.equals("          People Start")){
             SimpleGUI.setIsGeese(false);
             SimpleGUI.cardLayout.show(SimpleGUI.mainPanel, "pane2");
         }

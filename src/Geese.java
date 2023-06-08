@@ -6,7 +6,6 @@ import java.awt.event.MouseEvent;
 import java.awt.event.MouseMotionListener;
 
 public class Geese extends JPanel implements ActionListener, MouseMotionListener {
-
     private int x;
     private int y;
     private int previous;
@@ -28,13 +27,17 @@ public class Geese extends JPanel implements ActionListener, MouseMotionListener
     private Timer timer;
     private int seconds;
     private JLabel timerLabel;
+    private JLabel timerLabel2; //the drawing
 
     public Geese () {
         timer = new Timer(1000, null);
         seconds = 30;
         timerLabel = new JLabel("" + seconds);
+        timerLabel.setFont(new Font("Arial", Font.BOLD, 40));
+        timerLabel2 = new JLabel(" ");
 
         add(timerLabel);
+        add(timerLabel2);
         pStart = new JButton("  ");
         add(pStart);
         previous = 0;
@@ -73,6 +76,7 @@ public class Geese extends JPanel implements ActionListener, MouseMotionListener
 
         pStart.setVisible(true);
         timerLabel.setVisible(false);
+        timerLabel2.setVisible(false);
         b1.setVisible(false);
         b2.setVisible(false);
         b3.setVisible(false);
@@ -91,7 +95,32 @@ public class Geese extends JPanel implements ActionListener, MouseMotionListener
         Image iconImg = icon0.getImage();
         g.drawImage(iconImg, 0, 0, null);
 
-        timerLabel.setLocation(550, 40);
+        timerLabel.setLocation(510, 75);
+        timerLabel2.setLocation(470, 18);
+
+        if (seconds%2 == 0) {
+            ImageIcon icon;
+            icon = new ImageIcon("src/clockFront.png");
+            timerLabel2.setIcon(icon);
+            if (seconds < 10) {
+                timerLabel.setLocation(520, 75);
+            } else if (seconds < 20) {
+                timerLabel.setLocation(507, 78);
+            }
+        } else {
+            ImageIcon icon;
+            icon = new ImageIcon("src/clockBack.png");
+            timerLabel2.setIcon(icon);
+            timerLabel2.setLocation(470, 5);
+            if (seconds < 10) {
+                timerLabel.setLocation(519, 80);
+            } else if (seconds < 20) {
+                timerLabel.setLocation(507, 80);
+            } else {
+                timerLabel.setLocation(508, 80);
+            }
+        }
+
         pStart.setLocation(53,260);
 
         ImageIcon icon11;
@@ -304,7 +333,11 @@ public class Geese extends JPanel implements ActionListener, MouseMotionListener
             } else if (text.equals("  ")) { //pStart
                 pStart.setVisible(false);
                 timer.start();
+                ImageIcon icon;
+                icon = new ImageIcon("src/clockFront.png");
+                timerLabel2.setIcon(icon);
                 timerLabel.setVisible(true);
+                timerLabel2.setVisible(true);
                 randomGoose();
             }
         }
@@ -312,7 +345,8 @@ public class Geese extends JPanel implements ActionListener, MouseMotionListener
 
     public void timerFire() {
         seconds--;
-        timerLabel.setText(" " + seconds);
+        timerLabel.setText(Integer.toString(seconds));
+
 
         if (seconds == 0) {
             timer.stop();

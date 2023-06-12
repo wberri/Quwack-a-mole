@@ -5,10 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="027e4598-a674-4829-a262-c0dbe4e1e06b" name="Changes" comment="animation added to the timer">
+      <change afterPath="$PROJECT_DIR$/src/Person.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ScoreBoard.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/coolBG.jpeg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Geese.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Geese.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/SimpleGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SimpleGUI.java" afterDir="false" />
     </list>
+    <list id="b3553354-78d5-4385-923f-7c230ff6b783" name="Changes by wchan" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -45,6 +50,7 @@
       <recent name="C:\Users\wchan\IdeaProjects\Quwack-a-mole\src" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src" />
       <recent name="C:\Users\wchan\IdeaProjects\Quwack-a-mole\src" />
     </key>
   </component>

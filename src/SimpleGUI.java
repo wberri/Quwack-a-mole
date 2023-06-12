@@ -6,6 +6,7 @@ public class SimpleGUI extends JFrame{
 
     public static CardLayout cardLayout;
     public static JPanel mainPanel;
+    public ScoreBoard scores;
     private static boolean isGeese =false;
     private Geese newPanel;
     private Home homeScreen;
@@ -28,14 +29,17 @@ public class SimpleGUI extends JFrame{
         setLayout(new BorderLayout());
         cardLayout = new CardLayout();
         mainPanel = new JPanel(cardLayout);
+
         add(mainPanel);
 
         homeScreen = new Home();
 //        add(homeScreen);
         newPanel = new Geese();
+        scores = new ScoreBoard();
 //        add(newPanel);
         mainPanel.add("pane1", homeScreen);
         mainPanel.add("pane2", newPanel);
+        mainPanel.add("pane3", scores);
 
         setVisible(true);
     }

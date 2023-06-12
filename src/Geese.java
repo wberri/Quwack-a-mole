@@ -31,7 +31,7 @@ public class Geese extends JPanel implements ActionListener, MouseMotionListener
 
     public Geese () {
         timer = new Timer(1000, null);
-        seconds = 30;
+        seconds = 15;
         timerLabel = new JLabel("" + seconds);
         timerLabel.setFont(new Font("Arial", Font.BOLD, 40));
         Color c = new Color(179, 125, 84);
@@ -348,10 +348,39 @@ public class Geese extends JPanel implements ActionListener, MouseMotionListener
     public void timerFire() {
         seconds--;
         timerLabel.setText(Integer.toString(seconds));
-
+//        b1.setVisible(false);
+//        b2.setVisible(false);
+//        b3.setVisible(false);
+//        b4.setVisible(false);
+//        b5.setVisible(false);
+//        b6.setVisible(false);
+//        b7.setVisible(false);
+//        b8.setVisible(false);
+//        b9.setVisible(false);
+        if (previous==1){
+            b1.setVisible(false);
+        } else if (previous==2){
+            b2.setVisible(false);
+        } else if (previous==3){
+            b3.setVisible(false);
+        } else if (previous==4){
+            b4.setVisible(false);
+        } else if (previous==5){
+            b5.setVisible(false);
+        } else if (previous==6){
+            b6.setVisible(false);
+        } else if (previous==7){
+            b7.setVisible(false);
+        } else if (previous==8){
+            b8.setVisible(false);
+        } else if (previous==9){
+            b9.setVisible(false);
+        }
+        randomGoose();
 
         if (seconds == 0) {
             timer.stop();
+            SimpleGUI.cardLayout.show(SimpleGUI.mainPanel, "pane3");
         }
     }
 

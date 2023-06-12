@@ -285,6 +285,21 @@ public class Geese extends JPanel implements ActionListener, MouseMotionListener
             Image iconImg10 = icon10.getImage();
             g.drawImage(iconImg10, x-30, y-57, null);
         }
+
+//        if (!SimpleGUI.timerFired) {
+//            SimpleGUI.timerFalse();
+//            b1.setVisible(false);
+//            b2.setVisible(false);
+//            b3.setVisible(false);
+//            b4.setVisible(false);
+//            b5.setVisible(false);
+//            b6.setVisible(false);
+//            b7.setVisible(false);
+//            b8.setVisible(false);
+//            b9.setVisible(false);
+//            randomGoose();
+//            SimpleGUI.timerRestart();
+//        }
     }
 
     private void randomGoose() {
@@ -328,7 +343,6 @@ public class Geese extends JPanel implements ActionListener, MouseMotionListener
 
     @Override
     public void actionPerformed(ActionEvent e) {
-
         Object source = e.getSource();
         if (source instanceof Timer) {
             timerFire();

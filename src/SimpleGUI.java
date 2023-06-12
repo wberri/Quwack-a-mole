@@ -1,7 +1,9 @@
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
-public class SimpleGUI extends JFrame{
+public class SimpleGUI extends JFrame implements ActionListener {
     private JLabel welcomeLabel;
 
     public static CardLayout cardLayout;
@@ -42,7 +44,7 @@ public class SimpleGUI extends JFrame{
         mainPanel.add("pane1", homeScreen);
         mainPanel.add("pane2", newPanel);
         mainPanel.add("pane3", scores);
-
+        timer = new Timer(1000, null);
         setVisible(true);
     }
 
@@ -53,5 +55,20 @@ public class SimpleGUI extends JFrame{
         return isGeese;
     }
 
+    @Override
+    public void actionPerformed(ActionEvent e) {
+        Object source = e.getSource();
+        if (source instanceof Timer) {
+            timerFired = true;
+            timer.stop();
+        }
+    }
 
+    public static void timerRestart() {
+        timer.restart();
+    }
+
+    public static void timerFalse() {
+        timerFired = false;
+    }
 }

@@ -1,21 +1,24 @@
 import javax.swing.*;
+import java.util.ArrayList;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseMotionListener;
 public class ScoreBoard extends JPanel implements ActionListener{
-    private Person[] people;
+    private ArrayList<Person> people;
     private JTextField nameInsert;
     private JButton submit;
+    private String name;
 
     public ScoreBoard(){
-        people = new Person[5];
+        people = new ArrayList<Person>();
         nameInsert = new JTextField(10);
         nameInsert.setFont(new Font("Arial", Font.BOLD, 40));
         add(nameInsert);
         submit = new JButton(" ");
         add(submit);
+        name = "";
     }
 
     @Override
@@ -34,8 +37,19 @@ public class ScoreBoard extends JPanel implements ActionListener{
         String text = button.getText();
 
         if (text.equals(" ")) {
-            people[1].setName(nameInsert.getText());
+            name = nameInsert.getText();
 
+
+        }
+    }
+
+    public void setPerson(){
+        Person currentPerson = new Person(name, Geese.getCurrentScore());
+        //if null immediately add it in.
+        //if full, check for each if it fits in
+
+        for (int i = 0; i<people.size();i++){
+            //if ()
         }
     }
 }

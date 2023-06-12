@@ -6,6 +6,8 @@ public class SimpleGUI extends JFrame{
 
     public static CardLayout cardLayout;
     public static JPanel mainPanel;
+    public static Timer timer;
+    public static boolean timerFired;
     public ScoreBoard scores;
     private static boolean isGeese =false;
     private Geese newPanel;

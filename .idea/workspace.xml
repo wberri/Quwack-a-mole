@@ -4,16 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="027e4598-a674-4829-a262-c0dbe4e1e06b" name="Changes" comment="animation added to the timer">
-      <change afterPath="$PROJECT_DIR$/src/Person.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ScoreBoard.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/coolBG.jpeg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="027e4598-a674-4829-a262-c0dbe4e1e06b" name="Changes" comment="things are working">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Geese.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Geese.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ScoreBoard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ScoreBoard.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SimpleGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SimpleGUI.java" afterDir="false" />
+    </list>
+    <list id="b3553354-78d5-4385-923f-7c230ff6b783" name="Changes by wchan" comment="">
       <change beforePath="$PROJECT_DIR$/src/Geese.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Geese.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/SimpleGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SimpleGUI.java" afterDir="false" />
     </list>
-    <list id="b3553354-78d5-4385-923f-7c230ff6b783" name="Changes by wchan" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -28,6 +28,28 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="LineStatusTrackerManager">
+    <file path="$PROJECT_DIR$/src/Geese.java">
+      <ranges>
+        <range start1="30" end1="30" start2="30" end2="31" changelist="027e4598-a674-4829-a262-c0dbe4e1e06b" />
+        <range start1="39" end1="39" start2="40" end2="41" changelist="027e4598-a674-4829-a262-c0dbe4e1e06b" />
+        <range start1="91" end1="91" start2="93" end2="97" changelist="027e4598-a674-4829-a262-c0dbe4e1e06b" />
+        <range start1="281" end1="281" start2="287" end2="302" changelist="b3553354-78d5-4385-923f-7c230ff6b783" />
+        <range start1="324" end1="325" start2="345" end2="345" changelist="b3553354-78d5-4385-923f-7c230ff6b783" />
+        <range start1="350" end1="379" start2="370" end2="390" changelist="027e4598-a674-4829-a262-c0dbe4e1e06b" />
+      </ranges>
+    </file>
+    <file path="$PROJECT_DIR$/src/SimpleGUI.java">
+      <ranges>
+        <range start1="2" end1="2" start2="2" end2="4" changelist="b3553354-78d5-4385-923f-7c230ff6b783" />
+        <range start1="3" end1="4" start2="5" end2="6" changelist="b3553354-78d5-4385-923f-7c230ff6b783" />
+        <range start1="8" end1="8" start2="10" end2="12" changelist="027e4598-a674-4829-a262-c0dbe4e1e06b" />
+        <range start1="42" end1="43" start2="46" end2="47" changelist="b3553354-78d5-4385-923f-7c230ff6b783" />
+        <range start1="53" end1="53" start2="57" end2="65" changelist="b3553354-78d5-4385-923f-7c230ff6b783" />
+        <range start1="54" end1="54" start2="66" end2="73" changelist="b3553354-78d5-4385-923f-7c230ff6b783" />
+      </ranges>
+    </file>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -112,7 +134,14 @@
       <option name="project" value="LOCAL" />
       <updated>1686248846805</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="things are working">
+      <created>1686530739438</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1686530739438</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -131,6 +160,9 @@
     <MESSAGE value="- changed the start buttons' images" />
     <MESSAGE value="- added a timer, and added a little button thing before the player start playing" />
     <MESSAGE value="animation added to the timer" />
-    <option name="LAST_COMMIT_MESSAGE" value="animation added to the timer" />
+    <MESSAGE value="things are working//" />
+    <MESSAGE value="things are not working" />
+    <MESSAGE value="things are working" />
+    <option name="LAST_COMMIT_MESSAGE" value="things are working" />
   </component>
 </project>
